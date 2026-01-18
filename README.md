@@ -2,57 +2,93 @@
 JarRATScanner is a heuristic-based analysis tool designed to help users assess potential risk indicators in Minecraft .jar mods.  It focuses on static inspection, reputation checks, and common Remote Access Trojan (RAT) indicators — it is not an antivirus and does not execute or detonate files.
 
 ✨ Features
+🔍 JAR Security Analysis
 
-📦 JAR structure analysis
+Scans Java JAR files for suspicious behavioral indicators
 
-🔍 Suspicious class & method pattern detection
+Uses a weighted risk scoring system with clear severity levels:
 
-🌐 External link inspection (Discord, MediaFire, etc.)
+Low Risk
 
-📛 Known malicious indicator matching (hashes, strings, domains)
+Medium Risk
 
-🧠 Risk scoring (low / medium / high)
+High Risk
 
-🎨 Clean, modern desktop UI
-
-📁 Manual file selection (no drag & drop required)
-
-
-❌ What This Tool Does NOT Do
-
-❌ Does not execute files
-
-❌ Does not guarantee malware detection
-
-❌ Does not replace antivirus software
-
-❌ Does not claim 100% accuracy
-
-False positives and false negatives are possible.
+Designed to reduce false positives on legitimate mods and libraries
 
 
-🧪 How Detection Works (High Level)
+🛡️ Trust & Whitelisting
 
-JarRATScanner assigns a risk score based on:
+Built-in trust model for Forge and Fabric mods
 
-Known suspicious bytecode patterns
+Recognizes widely-used, legitimate mod distributions
 
-Hardcoded IPs, tokens, webhooks
+Whitelisting support to prevent trusted mods from being flagged
 
-Obfuscation indicators
+🧠 Behavioral Heuristics
 
-External hosting or chat platform references
+Detects potentially risky patterns such as:
 
-Community-reported malicious markers
+Runtime string decryption
 
-No single indicator marks a file as malicious — results are contextual.
+Heavy obfuscation
 
+Network-related behavior indicators
 
+Provides per-class behavior summaries instead of raw bytecode output
 
-⚠️ Disclaimer
+📊 Clear, User-Friendly Results
 
-This project is provided for educational and research purposes only.
+Displays a simple risk score (1–10) with color-coded warnings
 
-The author makes no guarantees regarding detection accuracy and assumes no liability for decisions made using this tool.
+Hides low-level technical strings from end users
+
+Focuses on what the risk means, not raw implementation details
+
+📦 File Selection Workflow
+
+Scan JAR files via standard file picker
+
+Automatic scan on file selection
+
+No system-wide or background scanning
+
+🎨 Modern Desktop Interface
+
+Clean, dark-themed UI designed for readability
+
+Minimal, distraction-free layout
+
+Desktop-only (no background services or system hooks)
+
+🔄 Extensible Detection System
+
+Detection logic designed to be easily updated
+
+Supports future integration of external threat intelligence feeds
+
+Modular scoring system for tuning thresholds over time
+
+🔐 Privacy-First Design
+
+All analysis runs locally
+
+No automatic file uploads
+
+No telemetry or tracking
+
+🧩 Intended Use
+
+JarSentry is intended for:
+
+Mod developers
+
+Server administrators
+
+Players verifying third-party mods
+
+Security-conscious users analyzing untrusted JAR files
+
+It is not an antivirus replacement and does not execute scanned files.
 
 Always verify files using multiple trusted security sources.
