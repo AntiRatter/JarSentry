@@ -1,4 +1,4 @@
-⭐ Key Features (Short Summary)
+⭐ Key Features
 
 Static security analysis for Java JAR files
 
