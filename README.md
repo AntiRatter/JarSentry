@@ -1,0 +1,7 @@
+🚀 Elevator Pitch
+
+JarSentry is a lightweight desktop security tool that helps users assess the safety of Java .jar files by analyzing behavioral indicators commonly associated with malware, including RATs and credential stealers. Rather than relying on simple signature matching, JarSentry applies a weighted risk-scoring system, obfuscation heuristics, and community threat intelligence references (including MalwareBazaar) to produce an easy-to-understand LOW, MEDIUM, or HIGH risk verdict. Designed with false-positive reduction in mind, it includes trust models for popular mod loaders and well-known legitimate projects, making it especially useful for users who frequently download third-party Java applications or game mods.
+
+⚠️ Limitations (Important)
+
+JarSentry performs static analysis only and does not execute or sandbox files. As a result, it cannot detect threats that activate solely at runtime or rely on environment-specific behavior. Risk scores are heuristic-based and not definitive proof of malicious intent; heavily obfuscated but legitimate software may still be flagged, while sophisticated malware may evade detection. Trust models and threat intelligence references are best-effort and not exhaustive, and new or private malware may not yet be represented in public databases. JarSentry should be used as a supplementary safety tool, not a replacement for a full antivirus solution or professional malware analysis.
